@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sixteen Clothing</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 40px;
+      z-index: 10000;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .navbar .logo span {
+      color: red;
+    }
+    .nav-links a {
+      margin-left: 20px;
+      font-weight: bold;
+      color: white;
+      position: relative;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: red;
+      bottom: -5px;
+      left: 0;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('./products-heading.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      top: 0;
+      left: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content p {
+      color: #f44336;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .hero-content h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    /* Products Section */
+    .section-title {
+      padding: 40px;
+      font-size: 28px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 40px 60px;
+    }
+    .product {
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .product .title {
+      color: #0066cc;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .product .price {
+      color: #000;
+      margin: 8px 0;
+    }
+    .product .desc {
+      font-size: 14px;
+      color: #777;
+    }
+    .product .stars {
+      color: red;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    /* About Section */
+    .about {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+    .about .content {
+      flex: 1;
+      min-width: 300px;
+    }
+    .about .image {
+      flex: 1;
+      min-width: 300px;
+    }
+    .about .image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .about ul {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+    .about li {
+      margin-bottom: 10px;
+    }
+    .read-more {
+      padding: 10px 20px;
+      background-color: red;
+      color: white;
+    }
+    .callout {
+      background-color: #f7f7f7;
+      padding: 30px 40px;
+      text-align: center;
+    }
+    .callout h3 {
+      color: #333;
+      font-weight: bold;
+    }
+    .callout p {
+      margin: 10px 0;
+      color: #666;
+    }
+    .callout .btn {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+    /* Footer */
+    footer {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    footer a {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">SIXTEEN <span>CLOTHING</span></div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#products">Our Products</a>
+      <a href="#About Us">About Us</a>
+      <a href="#contact">Contact Us</a></div>
+  </div>
+  <!-- Hero Section -->
+  <div class="hero" id="home">
+    <div class="hero-content">
+      <p>BEST OFFER</p>
+      <h1>NEW ARRIVALS ON SALE</h1> </div>
+  </div>
+  <!-- Products Section -->
+  <div class="section-title" id="products">Latest Products</div>
+  <div class="products">
+    <div class="product">
+      <img src="./shoes.jpg" alt="">
+      <div class="title">Shoes</div>
+      <div class="price">$27.75</div>
+      <div class="desc">Comfortable and stylish shoes for every step you take.</div>
+      <div class="stars">★★★★★ <span style="color:#999">Reviews (24)</span></div>
+    </div>
+    <div class="product">
+      <img src="./jacket.jpg" alt="">
+      <div class="title">Jacket</div>
+      <div class="price">$33.25</div>
+      <div class="desc">A sleek and durable jacket for everyday adventures.</div>
+      <div class="stars">★★★★★ <span style="color:#999">Reviews (21)</span></div>
+    </div>
+    <div class="product">
+      <img src="./product_03.jpg" alt="">
+      <div class="title">Woolen Warmth Set</div>
+      <div class="price">$26.45</div>
+      <div class="desc">Cozy, hand-knit scarves perfect for warmth and style.</div>
+      <div class="stars">★★★★★ <span style="color:#999">Reviews (36)</span></div>
+    </div>
+    <div class="product">
+      <img src="./snowmen.jpg" alt="">
+      <div class="title">Snowmen</div>
+      <div class="price">$24.25</div>
+      <div class="desc">Stay warm and stylish this winter with our cozy Snowmen collection.</div>
+      <div class="stars">★★★★★ <span style="color:#999">Reviews (48)</span></div>
+    </div>
+    <div class="product">
+      <img src="./sweater.jpg" alt="">
+      <div class="title">Sweater</div>
+      <div class="price">$23.50</div>
+      <div class="desc">Soft, stylish, and perfect for chilly days.</div>
+      <div class="stars">★★★★★ <span style="color:#999">Reviews (18)</span></div>
+    </div>
+    <div class="product">
+      <img src="./bird.jpg" alt="">
+      <div class="title">Bird</div>
+      <div class="price">$32.50</div>
+      <div class="desc">A charming design inspired by nature’s elegance.</div>
+      <div class="stars">★★★★★ <span style="color:#999">Reviews (32)</span></div>
+    </div>
+    <div class="product">
+      <img src="./cam.jpg" alt="Product">
+      <div class="title">Camera</div>
+      <div class="price">45.50</div>
+      <div class="desc">Capture moments in style with this sleek accessory.</div>
+      <div class="stars">★★★★★ <span style="color:#999">Reviews (42)</span></div>
+    </div>
+    <div class="product">
+      <img src="./sep.jpg" alt="Product">
+      <div class="title">Ray-Ban RX5154</div>
+      <div class="price">$55.50</div>
+      <div class="desc">Classic Ray-Ban RX5154 frames for a timeless, vintage look.</div>
+      <div class="stars">★★★★★ <span style="color:#999">Reviews (62)</span></div>
+    </div>
+  </div>
+  <!-- About Section -->
+  <div class="About Us" id="About Us">About Sixteen Clothing</div>
+
+  <p>🆕 Optional Improved Version:
+At Sixteen Clothing, we are passionate about bringing you the latest in fashion at unbeatable prices. Our mission is to provide high-quality, trendy, and comfortable clothing for everyone. Whether you're shopping for everyday wear or a statement piece, we've got something for you.
+Contact us to learn more about our products or how we can help elevate your style.</p>
+
+  <div class="about" id="Contact Us">
+    <div class="content">
+      <h2>Looking for the best products?</h2>
+      <ul>
+        <li>We offer the <strong>best styles</strong> for every occasion.</li>
+        <li>Our clothing is made from the <strong>best quality materials</strong>.</li>
+        <li>Find the <strong>best value</strong> with affordable pricing.</li>
+        <li>Experience the <strong>best in comfort</strong> and design.</li>
+        <li>We provide the <strong>best service</strong> to every customer.</li>
+      </ul>
+      <p>
+  At <strong>Sixteen Clothing</strong>, we are passionate about offering stylish, high-quality apparel that blends comfort and modern design. Our collections are carefully curated to help you express your unique personality while staying ahead of fashion trends. Whether you're dressing for everyday comfort or a standout occasion, Sixteen Clothing brings you affordable fashion you can trust.
+</p>
+      <ul>
+        <li>Consectetur an adipisicing elit</li>
+        <li>It aquecorporis nulla aspernatur</li>
+        <li>Corporis, omnis doloremque</li>
+        <li>Non cum id reprehenderit</li>
+      </ul>
+      <a class="read-more" href="./index.html">Read More</a></div>
+
+    <div class="image">
+      <img src="./girl.jpg" alt="About Image"></div>
+  </div>
+  <!-- Callout -->
+  <div class="callout">
+    <h3>Creative & Unique <strong>Sixteen</strong> Products</h3>
+    <p>Discover our exclusive collection of stylish and trendsetting fashion pieces only at Sixteen Clothing.</p>
+    <a href="#" class="btn">Purchase Now</a></div>
+  <!-- Footer -->  
+  <footer id="contact">COPYRIGHT © 2020 SIXTEEN CLOTHING CO., LTD.</footer>
+</body>
+</html>

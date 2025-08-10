@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SixteenClothing</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f2f2f2;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #232f3e;
+      color: white;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar input[type="text"] {
+      padding: 8px;
+      width: 300px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .navbar .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* Banner */
+    .banner {
+      background-image: url('https://images.unsplash.com/photo-1542060748-10c28b62716d');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner h1 {
+      font-size: 48px;
+    }
+
+    /* Product Grid */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-details h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .product-details p.price {
+      font-size: 16px;
+      color: #e67e22;
+      margin-bottom: 10px;
+    }
+
+    .product-details button {
+      padding: 10px 20px;
+      background-color: #232f3e;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .product-details button:hover {
+      background-color: #ff9900;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">SixteenClothing</div>
+    <input type="text" placeholder="Search for products...">
+    <div class="menu">
+      <a href="./index2.htm">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Deals</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Welcome to SixteenClothing</h1>
+  </div>
+
+  <!-- Products -->
+  <div class="products">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPhGz7et4-rmFWc23qWRnh0dxH0YY2uKU4MQ&s" alt="Shirt">
+      <div class="product-details">
+        <h3>Classic White Shirt</h3>
+        <p class="price">₹999</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc8NFJDW-il4E_fgYMEc4q9v2b8arf-1A-2Q&s" alt="Denim Jacket">
+      <div class="product-details">
+        <h3>Denim Jacket</h3>
+        <p class="price">₹1999</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://elizabethanthonyhouston.com/cdn/shop/files/S259304.png?v=1743623682" alt="Dress">
+      <div class="product-details">
+        <h3>Summer Dress</h3>
+        <p class="price">₹1499</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzaE8hSs6yyhXtiJXaG_QXh020NHzltzg8jg&s" alt="T-shirt">
+      <div class="product-details">
+        <h3>Graphic T-Shirt</h3>
+        <p class="price">₹799</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
